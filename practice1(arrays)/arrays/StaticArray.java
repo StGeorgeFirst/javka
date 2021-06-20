@@ -84,7 +84,7 @@ public class StaticArray implements Array {
         checkIndex(fromIndex);
         checkIndex(toIndex);
         if (toIndex <= fromIndex) {
-            throw new IllegalArgumentException("Pizdec");
+            throw new IllegalArgumentException("Wrong index value");
         }
         int[] subArray = new int[toIndex - fromIndex];
         if (toIndex - fromIndex >= 0) {
@@ -285,7 +285,7 @@ public class StaticArray implements Array {
 
     protected void checkIndex(int index) {
         if (index < 0 || index >= array.length) {
-            throw new ArrayIndexOutOfBoundsException("Pizdec");
+            throw new ArrayIndexOutOfBoundsException("Wrong index value");
         }
     }
 }
